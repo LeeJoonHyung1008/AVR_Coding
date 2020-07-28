@@ -1,0 +1,340 @@
+
+example6.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000000a  00800100  000001d8  0000024c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000001d8  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .stab         000006cc  00000000  00000000  00000258  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000085  00000000  00000000  00000924  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_aranges 00000040  00000000  00000000  000009a9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_pubnames 00000052  00000000  00000000  000009e9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000001af  00000000  00000000  00000a3b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000116  00000000  00000000  00000bea  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000265  00000000  00000000  00000d00  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000060  00000000  00000000  00000f68  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000000c6  00000000  00000000  00000fc8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000164  00000000  00000000  0000108e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_pubtypes 00000030  00000000  00000000  000011f2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 46 00 	jmp	0x8c	; 0x8c <__ctors_end>
+   4:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+   8:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+   c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  10:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  14:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  18:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  1c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  20:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  24:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  28:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  2c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  30:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  34:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  38:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  3c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  40:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  44:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  48:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  4c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  50:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  54:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  58:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  5c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  60:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  64:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  68:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  6c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  70:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  74:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  78:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  7c:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  80:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  84:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+  88:	0c 94 5d 00 	jmp	0xba	; 0xba <__bad_interrupt>
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	e8 ed       	ldi	r30, 0xD8	; 216
+  a0:	f1 e0       	ldi	r31, 0x01	; 1
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	aa 30       	cpi	r26, 0x0A	; 10
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+  b2:	0e 94 a3 00 	call	0x146	; 0x146 <main>
+  b6:	0c 94 ea 00 	jmp	0x1d4	; 0x1d4 <_exit>
+
+000000ba <__bad_interrupt>:
+  ba:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000be <keypad>:
+#include<avr/io.h>              // 메인함수의 선언
+#include "delay.h"          // 시간 지연함수를 선언
+
+int keypad()                    // keypad를 입력받는 함수를 선언과 정의 
+{
+  be:	ef 92       	push	r14
+  c0:	ff 92       	push	r15
+  c2:	cf 93       	push	r28
+  c4:	df 93       	push	r29
+int flag=0;                     // keypad를 아무것도 누르지 않았을 때 0을 출력
+PORTD=PORTD&0xFB;         		// PORTD를 11111011로 마스킹 이것은 sw(3,6,9)를 활성화시키기위해서 2번비트를 마스킹해주었다.
+  c6:	92 98       	cbi	0x12, 2	; 18
+delay_us(10);                  // 시간을 지연시켜줌
+  c8:	8a e0       	ldi	r24, 0x0A	; 10
+  ca:	90 e0       	ldi	r25, 0x00	; 0
+  cc:	0e 94 cb 00 	call	0x196	; 0x196 <delay_us>
+if((PIND&0x20)==0)flag=1;       // PORTD와 0b00100000와 &(AND) 마스킹해준다. sw3은 5번비트와 연결되어있기 때문에  sw6,9 인 6,7번비트는 1, 그리고 sw3은 0이여야 하므로 마스킹할 때 0이 나와야한다.
+  d0:	80 b3       	in	r24, 0x10	; 16
+if((PIND&0x40)==0)flag=4;       // PORTD와 0b01000000와 &(AND) 마스킹해준다. sw6은 6번비트와 연결되어있기 때문에  sw3,9 인 5,7번비트는 1, 그리고 sw6은 0이여야 하므로 마스킹할 때 0이 나와야한다.
+  d2:	86 9b       	sbis	0x10, 6	; 16
+  d4:	07 c0       	rjmp	.+14     	; 0xe4 <keypad+0x26>
+#include<avr/io.h>              // 메인함수의 선언
+#include "delay.h"          // 시간 지연함수를 선언
+
+int keypad()                    // keypad를 입력받는 함수를 선언과 정의 
+{
+int flag=0;                     // keypad를 아무것도 누르지 않았을 때 0을 출력
+  d6:	c1 e0       	ldi	r28, 0x01	; 1
+  d8:	d0 e0       	ldi	r29, 0x00	; 0
+  da:	85 ff       	sbrs	r24, 5
+  dc:	05 c0       	rjmp	.+10     	; 0xe8 <keypad+0x2a>
+  de:	c0 e0       	ldi	r28, 0x00	; 0
+  e0:	d0 e0       	ldi	r29, 0x00	; 0
+  e2:	02 c0       	rjmp	.+4      	; 0xe8 <keypad+0x2a>
+PORTD=PORTD&0xFB;         		// PORTD를 11111011로 마스킹 이것은 sw(3,6,9)를 활성화시키기위해서 2번비트를 마스킹해주었다.
+delay_us(10);                  // 시간을 지연시켜줌
+if((PIND&0x20)==0)flag=1;       // PORTD와 0b00100000와 &(AND) 마스킹해준다. sw3은 5번비트와 연결되어있기 때문에  sw6,9 인 6,7번비트는 1, 그리고 sw3은 0이여야 하므로 마스킹할 때 0이 나와야한다.
+if((PIND&0x40)==0)flag=4;       // PORTD와 0b01000000와 &(AND) 마스킹해준다. sw6은 6번비트와 연결되어있기 때문에  sw3,9 인 5,7번비트는 1, 그리고 sw6은 0이여야 하므로 마스킹할 때 0이 나와야한다.
+  e4:	c4 e0       	ldi	r28, 0x04	; 4
+  e6:	d0 e0       	ldi	r29, 0x00	; 0
+if((PIND&0x80)==0)flag=7;       // PORTD와 0b10000000와 &(AND) 마스킹해준다. sw9은 7번비트와 연결되어있기 때문에  sw3,6 인 5,6번비트는 1, 그리고 sw9은 0이여야 하므로 마스킹할 때 0이 나와야한다.
+  e8:	87 99       	sbic	0x10, 7	; 16
+  ea:	02 c0       	rjmp	.+4      	; 0xf0 <keypad+0x32>
+  ec:	c7 e0       	ldi	r28, 0x07	; 7
+  ee:	d0 e0       	ldi	r29, 0x00	; 0
+PORTD|=~0xFB;                	// 스위치를 땟을 때 다른 스위치를 누르기위해서 초기로 |(OR) 마스킹해준다.
+  f0:	92 9a       	sbi	0x12, 2	; 18
+
+PORTD=PORTD&0xF7;          		// PORTD를 11110111로 마스킹 이것은 sw(4,7,10)를 활성화시키기위해서 3번비트를 마스킹해주었다.
+  f2:	93 98       	cbi	0x12, 3	; 18
+delay_us(10);                  // 시간을 지연시켜줌
+  f4:	8a e0       	ldi	r24, 0x0A	; 10
+  f6:	90 e0       	ldi	r25, 0x00	; 0
+  f8:	0e 94 cb 00 	call	0x196	; 0x196 <delay_us>
+if((PIND&0x20)==0)flag=2;       // PORTD와 0b00100000와 &(AND) 마스킹해준다. sw4은 5번비트와 연결되어있기 때문에  sw7,10 인 6,7번비트는 1, 그리고 sw4은 0이여야 하므로 마스킹할 때 0이 나와야한다.
+  fc:	85 99       	sbic	0x10, 5	; 16
+  fe:	02 c0       	rjmp	.+4      	; 0x104 <keypad+0x46>
+ 100:	c2 e0       	ldi	r28, 0x02	; 2
+ 102:	d0 e0       	ldi	r29, 0x00	; 0
+if((PIND&0x40)==0)flag=5;       // PORTD와 0b01000000와 &(AND) 마스킹해준다. sw7은 6번비트와 연결되어있기 때문에  sw4,10 인 5,7번비트는 1, 그리고 sw7은 0이여야 하므로 마스킹할 때 0이 나와야한다.
+ 104:	86 99       	sbic	0x10, 6	; 16
+ 106:	02 c0       	rjmp	.+4      	; 0x10c <keypad+0x4e>
+ 108:	c5 e0       	ldi	r28, 0x05	; 5
+ 10a:	d0 e0       	ldi	r29, 0x00	; 0
+if((PIND&0x80)==0)flag=8;       // PORTD와 0b10000000와 &(AND) 마스킹해준다. sw10은 7번비트와 연결되어있기 때문에  sw4,7 인 5,6번비트는 1, 그리고 sw10은 0이여야 하므로 마스킹할 때 0이 나와야한다.
+ 10c:	87 99       	sbic	0x10, 7	; 16
+ 10e:	02 c0       	rjmp	.+4      	; 0x114 <keypad+0x56>
+ 110:	c8 e0       	ldi	r28, 0x08	; 8
+ 112:	d0 e0       	ldi	r29, 0x00	; 0
+PORTD|=~0xF7;                  	// 스위치를 땟을 때 다른 스위치를 누르기위해서 초기로 |(OR) 마스킹해준다.
+ 114:	93 9a       	sbi	0x12, 3	; 18
+
+PORTD=PORTD&0xEF;         		// PORTD를 11101111로 마스킹 이것은 sw(5,8,11)를 활성화시키기위해서 4번비트를 마스킹해주었다.
+ 116:	94 98       	cbi	0x12, 4	; 18
+delay_us(10);                  // 시간을 지연시켜줌
+ 118:	8a e0       	ldi	r24, 0x0A	; 10
+ 11a:	90 e0       	ldi	r25, 0x00	; 0
+ 11c:	0e 94 cb 00 	call	0x196	; 0x196 <delay_us>
+if((PIND&0x20)==0)flag=3;       // PORTD와 0b00100000와 &마스킹해준다. sw5은 5번비트와 연결되어있기 때문에  sw8,11 인 6,7번비트는 1, 그리고 sw5은 0이여야 하므로 마스킹할 때 0이 나와야한다.
+ 120:	85 99       	sbic	0x10, 5	; 16
+ 122:	02 c0       	rjmp	.+4      	; 0x128 <keypad+0x6a>
+ 124:	c3 e0       	ldi	r28, 0x03	; 3
+ 126:	d0 e0       	ldi	r29, 0x00	; 0
+if((PIND&0x40)==0)flag=6;       // PORTD와 0b01000000와 &마스킹해준다. sw8은 6번비트와 연결되어있기 때문에  sw5,11 인 5,7번비트는 1, 그리고 sw8은 0이여야 하므로 마스킹할 때 0이 나와야한다.
+ 128:	86 99       	sbic	0x10, 6	; 16
+ 12a:	02 c0       	rjmp	.+4      	; 0x130 <keypad+0x72>
+ 12c:	c6 e0       	ldi	r28, 0x06	; 6
+ 12e:	d0 e0       	ldi	r29, 0x00	; 0
+if((PIND&0x80)==0)flag=9;      	// PORTD와 0b10000000와 &마스킹해준다. sw11은 7번비트와 연결되어있기 때문에  sw5,8 인 5,6번비트는 1, 그리고 sw11은 0이여야 하므로 마스킹할 때 0이 나와야한다.
+ 130:	87 99       	sbic	0x10, 7	; 16
+ 132:	02 c0       	rjmp	.+4      	; 0x138 <keypad+0x7a>
+ 134:	c9 e0       	ldi	r28, 0x09	; 9
+ 136:	d0 e0       	ldi	r29, 0x00	; 0
+PORTD|=~0xEF;               	// 스위치를 땟을 때 다른 스위치를 누르기위해서 초기로 |(OR) 마스킹해준다.
+ 138:	94 9a       	sbi	0x12, 4	; 18
+
+return flag;                    // flag값을 출력
+}
+ 13a:	ce 01       	movw	r24, r28
+ 13c:	df 91       	pop	r29
+ 13e:	cf 91       	pop	r28
+ 140:	ff 90       	pop	r15
+ 142:	ef 90       	pop	r14
+ 144:	08 95       	ret
+
+00000146 <main>:
+
+void main()                     //메인함수의 선언
+{
+ 146:	ef 92       	push	r14
+ 148:	ff 92       	push	r15
+ 14a:	0f 93       	push	r16
+ 14c:	1f 93       	push	r17
+ 14e:	df 93       	push	r29
+ 150:	cf 93       	push	r28
+ 152:	cd b7       	in	r28, 0x3d	; 61
+ 154:	de b7       	in	r29, 0x3e	; 62
+ 156:	2a 97       	sbiw	r28, 0x0a	; 10
+ 158:	0f b6       	in	r0, 0x3f	; 63
+ 15a:	f8 94       	cli
+ 15c:	de bf       	out	0x3e, r29	; 62
+ 15e:	0f be       	out	0x3f, r0	; 63
+ 160:	cd bf       	out	0x3d, r28	; 61
+   char array[10]={0xC0, 0xF9, 0xA4, 0xB0, 0x99, 0x92, 0x82, 0xD8, 0x80, 0x98};  // 차례로 세그먼트에서 0~9까지일 때 활성화되는 2진수를 16진수로 변환시켜준 것이다. 0xC0은 0b11000000인데 이는 세그먼트에서 ‘.’이랑 g번 포트만 빼고 전부 켠 것이다. 그러면 세그먼트에는 0이 출력된다.
+ 162:	de 01       	movw	r26, r28
+ 164:	11 96       	adiw	r26, 0x01	; 1
+ 166:	e0 e0       	ldi	r30, 0x00	; 0
+ 168:	f1 e0       	ldi	r31, 0x01	; 1
+ 16a:	8a e0       	ldi	r24, 0x0A	; 10
+ 16c:	01 90       	ld	r0, Z+
+ 16e:	0d 92       	st	X+, r0
+ 170:	81 50       	subi	r24, 0x01	; 1
+ 172:	e1 f7       	brne	.-8      	; 0x16c <main+0x26>
+   int data=0;               	//data라는 변수를 선언, 그리고 0으로 초기화시켜준다. 
+   while(1)                  	//무한루프문 진입
+   {
+      DDRD=0x1C;          		// PORTD는 2,3,4번 비트는 출력, 나머지 비트는 입력으로 방향을 설정
+ 174:	8c e1       	ldi	r24, 0x1C	; 28
+ 176:	e8 2e       	mov	r14, r24
+      DDRC=0xFF;            	// PORTA는 모든비트에서 출력을 설정
+ 178:	ff 24       	eor	r15, r15
+ 17a:	fa 94       	dec	r15
+      data=keypad();          	// data는 keypad함수의 return값을 받음
+      PORTC=array[data];     	// PORTA는 배열의 data값으로 출력
+ 17c:	8e 01       	movw	r16, r28
+ 17e:	0f 5f       	subi	r16, 0xFF	; 255
+ 180:	1f 4f       	sbci	r17, 0xFF	; 255
+{
+   char array[10]={0xC0, 0xF9, 0xA4, 0xB0, 0x99, 0x92, 0x82, 0xD8, 0x80, 0x98};  // 차례로 세그먼트에서 0~9까지일 때 활성화되는 2진수를 16진수로 변환시켜준 것이다. 0xC0은 0b11000000인데 이는 세그먼트에서 ‘.’이랑 g번 포트만 빼고 전부 켠 것이다. 그러면 세그먼트에는 0이 출력된다.
+   int data=0;               	//data라는 변수를 선언, 그리고 0으로 초기화시켜준다. 
+   while(1)                  	//무한루프문 진입
+   {
+      DDRD=0x1C;          		// PORTD는 2,3,4번 비트는 출력, 나머지 비트는 입력으로 방향을 설정
+ 182:	e1 ba       	out	0x11, r14	; 17
+      DDRC=0xFF;            	// PORTA는 모든비트에서 출력을 설정
+ 184:	f4 ba       	out	0x14, r15	; 20
+      data=keypad();          	// data는 keypad함수의 return값을 받음
+ 186:	0e 94 5f 00 	call	0xbe	; 0xbe <keypad>
+      PORTC=array[data];     	// PORTA는 배열의 data값으로 출력
+ 18a:	f8 01       	movw	r30, r16
+ 18c:	e8 0f       	add	r30, r24
+ 18e:	f9 1f       	adc	r31, r25
+ 190:	80 81       	ld	r24, Z
+ 192:	85 bb       	out	0x15, r24	; 21
+ 194:	f6 cf       	rjmp	.-20     	; 0x182 <main+0x3c>
+
+00000196 <delay_us>:
+#include "delay.h"
+
+void delay_us(unsigned int time)
+{
+	unsigned int ns_i;
+	for(ns_i=0;ns_i<time;ns_i++)
+ 196:	20 e0       	ldi	r18, 0x00	; 0
+ 198:	30 e0       	ldi	r19, 0x00	; 0
+ 19a:	03 c0       	rjmp	.+6      	; 0x1a2 <delay_us+0xc>
+	{
+		asm("nop");
+ 19c:	00 00       	nop
+#include "delay.h"
+
+void delay_us(unsigned int time)
+{
+	unsigned int ns_i;
+	for(ns_i=0;ns_i<time;ns_i++)
+ 19e:	2f 5f       	subi	r18, 0xFF	; 255
+ 1a0:	3f 4f       	sbci	r19, 0xFF	; 255
+ 1a2:	28 17       	cp	r18, r24
+ 1a4:	39 07       	cpc	r19, r25
+ 1a6:	d0 f3       	brcs	.-12     	; 0x19c <delay_us+0x6>
+	{
+		asm("nop");
+	}
+}
+ 1a8:	08 95       	ret
+
+000001aa <delay_ms>:
+
+void delay_ms(unsigned int time)
+{
+ 1aa:	0f 93       	push	r16
+ 1ac:	1f 93       	push	r17
+ 1ae:	cf 93       	push	r28
+ 1b0:	df 93       	push	r29
+ 1b2:	8c 01       	movw	r16, r24
+	unsigned int ns_i;
+	for(ns_i=0;ns_i<time;ns_i++)
+ 1b4:	c0 e0       	ldi	r28, 0x00	; 0
+ 1b6:	d0 e0       	ldi	r29, 0x00	; 0
+ 1b8:	05 c0       	rjmp	.+10     	; 0x1c4 <delay_ms+0x1a>
+	{
+		delay_us(1000/14);
+ 1ba:	87 e4       	ldi	r24, 0x47	; 71
+ 1bc:	90 e0       	ldi	r25, 0x00	; 0
+ 1be:	0e 94 cb 00 	call	0x196	; 0x196 <delay_us>
+}
+
+void delay_ms(unsigned int time)
+{
+	unsigned int ns_i;
+	for(ns_i=0;ns_i<time;ns_i++)
+ 1c2:	21 96       	adiw	r28, 0x01	; 1
+ 1c4:	c0 17       	cp	r28, r16
+ 1c6:	d1 07       	cpc	r29, r17
+ 1c8:	c0 f3       	brcs	.-16     	; 0x1ba <delay_ms+0x10>
+	{
+		delay_us(1000/14);
+	}
+}
+ 1ca:	df 91       	pop	r29
+ 1cc:	cf 91       	pop	r28
+ 1ce:	1f 91       	pop	r17
+ 1d0:	0f 91       	pop	r16
+ 1d2:	08 95       	ret
+
+000001d4 <_exit>:
+ 1d4:	f8 94       	cli
+
+000001d6 <__stop_program>:
+ 1d6:	ff cf       	rjmp	.-2      	; 0x1d6 <__stop_program>
