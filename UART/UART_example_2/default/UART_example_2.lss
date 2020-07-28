@@ -1,0 +1,293 @@
+
+UART_example_2.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000001a8  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .stab         000006cc  00000000  00000000  000001fc  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  2 .stabstr      00000085  00000000  00000000  000008c8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  3 .debug_aranges 00000020  00000000  00000000  0000094d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_pubnames 00000067  00000000  00000000  0000096d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000178  00000000  00000000  000009d4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000000ec  00000000  00000000  00000b4c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000001d9  00000000  00000000  00000c38  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000080  00000000  00000000  00000e14  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000000e7  00000000  00000000  00000e94  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000070  00000000  00000000  00000f7b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_pubtypes 0000001e  00000000  00000000  00000feb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 46 00 	jmp	0x8c	; 0x8c <__ctors_end>
+   4:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+   8:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+   c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  10:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  14:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  18:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  1c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  20:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  24:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  28:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  2c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  30:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  34:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  38:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  3c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  40:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  44:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  48:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  4c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  50:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  54:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  58:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  5c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  60:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  64:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  68:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  6c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  70:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  74:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  78:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  7c:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  80:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  84:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+  88:	0c 94 50 00 	jmp	0xa0	; 0xa0 <__bad_interrupt>
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+  98:	0e 94 a2 00 	call	0x144	; 0x144 <main>
+  9c:	0c 94 d2 00 	jmp	0x1a4	; 0x1a4 <_exit>
+
+000000a0 <__bad_interrupt>:
+  a0:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000a4 <IO_init>:
+void put_string(unsigned char *data);	// put_string() 함수의 선언.
+void putch_3dec(int data);		// put_3dec() 함수의 선언.
+
+void IO_init()		// 입/출력 레지스터를 설정하는 함수이다.
+{
+	DDRA=0xFF;	// PORT A를 모두 출력으로 한다.
+  a4:	8f ef       	ldi	r24, 0xFF	; 255
+  a6:	8a bb       	out	0x1a, r24	; 26
+}
+  a8:	08 95       	ret
+
+000000aa <UART_init>:
+void UART_init()	// UART 레지스터를 설정하는 함수이다.
+{
+	UCSR1A=0x00;	// RXC, TXC, UDRE는 데이터가 없는 상태이므로 0으로 설정한다. 데이터가 없는 상태이므로 FE, DOR, UPE는 0, Double speed mode를 사용하지 않을 것이므로 0, multiprocessor mode를 사용하지 않을 것이므로 0으로 설정한다.
+  aa:	10 92 9b 00 	sts	0x009B, r1
+	UCSR1B=0x18;	// 인터럽트를 설정해주지 않을 것이므로 RXCIE, TXCIE, UDRIE를 0으로 설정해준다. 데이터 송/수신을 활성화 시켜야 하므로 RXEN, TXEN을 1로 설정한다. UCZ는 C 레지스터와 함게 사용할 것이므로 일단 0으로 설정한다. 그리고 RXB8와 TXB8은 8번 bit를 사용하지 않을 것이므로 0으로 설정한다.
+  ae:	88 e1       	ldi	r24, 0x18	; 24
+  b0:	80 93 9a 00 	sts	0x009A, r24
+	UCSR1C=0x06;	// 7번 bit는 없으므로 0이다. 비동기식 통신을 사용할 것이므로 UMSEL은 0으로 설정한다. UPM1과 UPM0은 parity mode를 사용하지 않을 것이므로 00으로 설정해준다. UBS는 stop bit를 1 bit크기로 설정해줄 것이므로 0으로 설정해준다. UCZ1과 UCZ0과 B 레지스터의 2번 bit를 통해 8bit의 크기로 설정할 것이기 때문에 011으로 설정해준다. UCPOL은 동기식 통신에서만 사용하기 때문에 0으로 설정한다. 
+  b4:	86 e0       	ldi	r24, 0x06	; 6
+  b6:	80 93 9d 00 	sts	0x009D, r24
+	UBRR1H=0x00;	
+  ba:	10 92 98 00 	sts	0x0098, r1
+	UBRR1L=25;	// UBRR은 baud rate를 정해줄 때 사용하는 12 bit의 레지스터이다. H 레지스터는 0x00으로 0의 모두 값을 주고, L 레지스터에는 25의 값을 넣는다. 이때 baud rate를 구하는 수식은  이고 38461의 값이 나온다. 
+  be:	89 e1       	ldi	r24, 0x19	; 25
+  c0:	80 93 99 00 	sts	0x0099, r24
+}
+  c4:	08 95       	ret
+
+000000c6 <putch>:
+
+void putch(char data)	// putch 함수이다.
+{
+	while(!(UCSR1A&0x20));	// while(1)과 똑같은 말이다.(무조건 실행) UCSR1A의 5번 bit(UDRE)를 1과 &(AND) 연산 한다. UDRE는 UDRn송신 버퍼에 수신이 가능하면 Set된다. 즉 수신을 받는 과정이다.
+  c6:	90 91 9b 00 	lds	r25, 0x009B
+  ca:	95 ff       	sbrs	r25, 5
+  cc:	fc cf       	rjmp	.-8      	; 0xc6 <putch>
+	PORTA=data;	// 입력받은 데이터를 PORT A로 보내주어서 LED를 킨다. (송신)
+  ce:	8b bb       	out	0x1b, r24	; 27
+}
+  d0:	08 95       	ret
+
+000000d2 <getch>:
+
+char getch(void)		// getch 함수이다.
+{
+	while(!(UCSR1A&0x80));	// while(1)과 똑같은 말이다. (무조건 실행) UCSR1A의 7번 bit(RXC)를 1과 &(AND) 연산 한다. RXC는 읽어 들이지 않은 데이터가 UDR에 저장되어있을 때 SET되고 INT모드에서는 INT를 발생시킨다. 즉 수신한 데이터를 송신하는 과정이다.
+  d2:	80 91 9b 00 	lds	r24, 0x009B
+  d6:	87 ff       	sbrs	r24, 7
+  d8:	fc cf       	rjmp	.-8      	; 0xd2 <getch>
+	return UDR1;	// 수신 받은 값을 return 한다.
+  da:	80 91 9c 00 	lds	r24, 0x009C
+}
+  de:	08 95       	ret
+
+000000e0 <put_string>:
+
+void put_string(unsigned char *data)	// put_string 함수이다.
+{
+  e0:	ef 92       	push	r14
+  e2:	ff 92       	push	r15
+  e4:	cf 93       	push	r28
+  e6:	df 93       	push	r29
+  e8:	e8 2e       	mov	r14, r24
+  ea:	e7 01       	movw	r28, r14
+  ec:	7e 01       	movw	r14, r28
+  ee:	f9 2e       	mov	r15, r25
+  f0:	e7 01       	movw	r28, r14
+	while(*data)	// data라는 주소에서 가져온 값 *data가 있으면
+  f2:	02 c0       	rjmp	.+4      	; 0xf8 <put_string+0x18>
+	{
+		putch(*data++);		// data 값을 한 칸씩 읽으면서 문자열처럼 입력.
+  f4:	0e 94 63 00 	call	0xc6	; 0xc6 <putch>
+	return UDR1;	// 수신 받은 값을 return 한다.
+}
+
+void put_string(unsigned char *data)	// put_string 함수이다.
+{
+	while(*data)	// data라는 주소에서 가져온 값 *data가 있으면
+  f8:	89 91       	ld	r24, Y+
+  fa:	88 23       	and	r24, r24
+  fc:	d9 f7       	brne	.-10     	; 0xf4 <put_string+0x14>
+	{
+		putch(*data++);		// data 값을 한 칸씩 읽으면서 문자열처럼 입력.
+	}
+}
+  fe:	df 91       	pop	r29
+ 100:	cf 91       	pop	r28
+ 102:	ff 90       	pop	r15
+ 104:	ef 90       	pop	r14
+ 106:	08 95       	ret
+
+00000108 <putch_3dec>:
+void putch_3dec(int data)	// putch_3dec 함수이다.
+{
+ 108:	1f 93       	push	r17
+ 10a:	cf 93       	push	r28
+ 10c:	df 93       	push	r29
+	int temp, temp2;		// temp, temp2라는 변수를 선언.
+	temp=data/100;		// temp는 수신 받은 데이터에서 100을 나눈 몫이다.
+	temp2=data%100;	// temp2는 수신 받은 데이터에서 100을 나눈 나머지이다.
+ 10e:	64 e6       	ldi	r22, 0x64	; 100
+ 110:	70 e0       	ldi	r23, 0x00	; 0
+ 112:	0e 94 ab 00 	call	0x156	; 0x156 <__divmodhi4>
+ 116:	ec 01       	movw	r28, r24
+	putch(temp+'0');	// temp는 int형이고 putch함수는 char형태를 입력받는 함수이다. 그러므로 숫자 0을 더해주려면 ‘0’ 형태로 마치 char로 인식하여 더해 주어야한다. 그리고 그 temp값을 송신해준다.
+ 118:	86 2f       	mov	r24, r22
+ 11a:	80 5d       	subi	r24, 0xD0	; 208
+ 11c:	0e 94 63 00 	call	0xc6	; 0xc6 <putch>
+	putch((temp2/10)+'0');		// temp2값에 10을 나눠주어 몫(10의 자리)을 putch함수에 넣어주어 그 temp2 값을 송신해준다.
+ 120:	ce 01       	movw	r24, r28
+ 122:	6a e0       	ldi	r22, 0x0A	; 10
+ 124:	70 e0       	ldi	r23, 0x00	; 0
+ 126:	0e 94 ab 00 	call	0x156	; 0x156 <__divmodhi4>
+ 12a:	18 2f       	mov	r17, r24
+ 12c:	86 2f       	mov	r24, r22
+ 12e:	80 5d       	subi	r24, 0xD0	; 208
+ 130:	0e 94 63 00 	call	0xc6	; 0xc6 <putch>
+	putch((temp2%10)+'0');		// temp2값의 10을 나눈 값의 나머지인 1의 자리 수 값((temp2%10)+'0')을 송신해준다.
+ 134:	81 2f       	mov	r24, r17
+ 136:	80 5d       	subi	r24, 0xD0	; 208
+ 138:	0e 94 63 00 	call	0xc6	; 0xc6 <putch>
+}
+ 13c:	df 91       	pop	r29
+ 13e:	cf 91       	pop	r28
+ 140:	1f 91       	pop	r17
+ 142:	08 95       	ret
+
+00000144 <main>:
+void put_string(unsigned char *data);	// put_string() 함수의 선언.
+void putch_3dec(int data);		// put_3dec() 함수의 선언.
+
+void IO_init()		// 입/출력 레지스터를 설정하는 함수이다.
+{
+	DDRA=0xFF;	// PORT A를 모두 출력으로 한다.
+ 144:	8f ef       	ldi	r24, 0xFF	; 255
+ 146:	8a bb       	out	0x1a, r24	; 26
+}
+
+void main()
+{
+	IO_init();	// 입/출력 레지스터 설정 함수를 불러온다.
+	UART_init();	// UART 레지스터 설정 함수를 불러온다.
+ 148:	0e 94 55 00 	call	0xaa	; 0xaa <UART_init>
+	while(1)
+	{
+		putch(getch());	// getch() 함수를 통해 데이터를 수신하고 putch() 함수를 통해 수신 받은 데이터를 PORT A로 보내주어 LED를 킨다.	
+ 14c:	0e 94 69 00 	call	0xd2	; 0xd2 <getch>
+ 150:	0e 94 63 00 	call	0xc6	; 0xc6 <putch>
+ 154:	fb cf       	rjmp	.-10     	; 0x14c <main+0x8>
+
+00000156 <__divmodhi4>:
+ 156:	97 fb       	bst	r25, 7
+ 158:	09 2e       	mov	r0, r25
+ 15a:	07 26       	eor	r0, r23
+ 15c:	0a d0       	rcall	.+20     	; 0x172 <__divmodhi4_neg1>
+ 15e:	77 fd       	sbrc	r23, 7
+ 160:	04 d0       	rcall	.+8      	; 0x16a <__divmodhi4_neg2>
+ 162:	0c d0       	rcall	.+24     	; 0x17c <__udivmodhi4>
+ 164:	06 d0       	rcall	.+12     	; 0x172 <__divmodhi4_neg1>
+ 166:	00 20       	and	r0, r0
+ 168:	1a f4       	brpl	.+6      	; 0x170 <__divmodhi4_exit>
+
+0000016a <__divmodhi4_neg2>:
+ 16a:	70 95       	com	r23
+ 16c:	61 95       	neg	r22
+ 16e:	7f 4f       	sbci	r23, 0xFF	; 255
+
+00000170 <__divmodhi4_exit>:
+ 170:	08 95       	ret
+
+00000172 <__divmodhi4_neg1>:
+ 172:	f6 f7       	brtc	.-4      	; 0x170 <__divmodhi4_exit>
+ 174:	90 95       	com	r25
+ 176:	81 95       	neg	r24
+ 178:	9f 4f       	sbci	r25, 0xFF	; 255
+ 17a:	08 95       	ret
+
+0000017c <__udivmodhi4>:
+ 17c:	aa 1b       	sub	r26, r26
+ 17e:	bb 1b       	sub	r27, r27
+ 180:	51 e1       	ldi	r21, 0x11	; 17
+ 182:	07 c0       	rjmp	.+14     	; 0x192 <__udivmodhi4_ep>
+
+00000184 <__udivmodhi4_loop>:
+ 184:	aa 1f       	adc	r26, r26
+ 186:	bb 1f       	adc	r27, r27
+ 188:	a6 17       	cp	r26, r22
+ 18a:	b7 07       	cpc	r27, r23
+ 18c:	10 f0       	brcs	.+4      	; 0x192 <__udivmodhi4_ep>
+ 18e:	a6 1b       	sub	r26, r22
+ 190:	b7 0b       	sbc	r27, r23
+
+00000192 <__udivmodhi4_ep>:
+ 192:	88 1f       	adc	r24, r24
+ 194:	99 1f       	adc	r25, r25
+ 196:	5a 95       	dec	r21
+ 198:	a9 f7       	brne	.-22     	; 0x184 <__udivmodhi4_loop>
+ 19a:	80 95       	com	r24
+ 19c:	90 95       	com	r25
+ 19e:	bc 01       	movw	r22, r24
+ 1a0:	cd 01       	movw	r24, r26
+ 1a2:	08 95       	ret
+
+000001a4 <_exit>:
+ 1a4:	f8 94       	cli
+
+000001a6 <__stop_program>:
+ 1a6:	ff cf       	rjmp	.-2      	; 0x1a6 <__stop_program>
